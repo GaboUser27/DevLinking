@@ -2,7 +2,7 @@ import express from "express";
 import * as dotenv from "dotenv";
 import cors from "cors";
 import morgan from "morgan";
-//import { AppRoutes } from "./routes/routes";
+import { AppRoutes } from "./routes/routes";
 //import { ErrorMiddleware } from "./middlewares/error.middleware";
 
 const app = express();
@@ -23,11 +23,11 @@ app.use(
 );
 app.get("/", (req, res) => {
     res.json({
-        message: "API de videojuegos funcionando correctamente",
+        message: "API de Devlinking funcionando correctamente",
     });
 });
 //---- Definir rutas ----
-//app.use(AppRoutes.routes)
+app.use(AppRoutes.routes)
 
 // Handle errors middleware
 //app.use(ErrorMiddleware.handleError)
